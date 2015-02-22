@@ -43,3 +43,20 @@ cacheSolve <- function(x, ...) {
         x$setinverse(inv)
         inv
 }
+
+## test case
+
+exampleMatrix <- matrix(c(1, 0, 5, 2, 1, 6, 3, 4, 0), 3, 3)
+
+# The inverse of this matrix should be
+# -24  18   5
+#  20 -15  -4
+#  -5   4   1
+
+# Run functions makeCacheMatrix and cacheSolve
+# check answer matches the above matrix
+
+m <- makeCacheMatrix(exampleMatrix)
+m$get()
+cacheSolve(m)
+cacheSolve(m)
